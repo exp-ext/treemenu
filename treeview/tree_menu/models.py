@@ -29,3 +29,8 @@ class MenuItem(models.Model):
 
     def __str__(self):
         return self.title
+
+    def save(self, *args, **kwargs):
+        if self.parent and self.slug != self.parent:
+            self.slug = self.parent.slug
+        super().save(*args, **kwargs)
