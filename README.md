@@ -1,7 +1,7 @@
 ![статус](https://github.com/exp-ext/treemenu/actions/workflows/workflow.yml/badge.svg?event=push)
 
 <p align="center">
-<img src="https://github.com/exp-ext/treemenu/tree/main/treeview/media/tree.png?raw=true" width="1200">
+<img src="https://github.com/exp-ext/treemenu/blob/main/treeview/media/tree.png" width="1200">
 </p>
 
 <div>

@@ -7,7 +7,7 @@ class PageView(TemplateView):
 
 
 def post_detail(request, post_id):
-
+    """Возвращает текст с номером id для теста."""
     post = f'Элемент-{post_id}'
     context = {
         'post': post,

@@ -23,8 +23,8 @@ def render_menu(menu_items, parent=None):
 @register.inclusion_tag('templatetags/menu.html', takes_context=True)
 def draw_menu(context, menu_name):
     """
-    Одним запросом выгружаем queryset с данными для меню
-    создаём и возвращаем словарь и текущий url.
+    Одним запросом выгружаем queryset с данными для меню,
+    создаёт и возвращаем словарь и текущий url.
     """
 
     menu_items = MenuItem.objects.filter(
