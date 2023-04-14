@@ -1,0 +1,20 @@
+{% load draw_menu %}
+{% load static %}
+
+{% block style %}  
+  <link rel="stylesheet" href="{% static 'css/menu.css' %}">
+{% endblock %}
+
+
+<div class="headline">
+  <div class="nav-wrapper">
+    <nav class="nav-menu">  
+
+      {% draw_menu 'main_menu' %}
+
+
+      {% draw_menu 'breakfast' %}
+
+    </nav>
+  </div>
+</div>

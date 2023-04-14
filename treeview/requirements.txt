@@ -1,0 +1,9 @@
+# Django
+Django~=4.2
+python-dotenv~=1.0.0
+django-debug-toolbar~=4.0.0
+
+# Django productions
+gunicorn~=20.1.0
+whitenoise~=6.3.0
+psycopg2-binary~=2.9.5
