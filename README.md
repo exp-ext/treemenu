@@ -1,5 +1,8 @@
-![статус](https://github.com/exp-ext/treemenu/actions/workflows/foodgram_workflow.yml/badge.svg?event=push)
+![статус](https://github.com/exp-ext/treemenu/actions/workflows/workflow.yml/badge.svg?event=push)
 
+<p align="center">
+<img src="https://github.com/exp-ext/treemenu/tree/main/treeview/media/tree.png?raw=true" width="1200">
+</p>
 
 <div>
 <div>Django app, который будет реализовывать древовидное меню, соблюдая следующие условия:</div>
@@ -19,11 +22,3 @@
 <div>&nbsp;</div>
 <div>При выполнении задания из библиотек следует использовать только Django и стандартную библиотеку Python.</div>
 </div>
-
-<p align="center">
-<img src="https://github.com/exp-ext/treemenu/blob/master/media/tree.png?raw=true" width="1200">
-</p>
-
-<p align="center">
-<img src="https://github.com/exp-ext/treemenu/blob/master/media/request.png?raw=true" width="1200">
-</p>

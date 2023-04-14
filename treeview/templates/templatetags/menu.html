@@ -1,19 +1,15 @@
-
 <ul class="clearfix">
   {% for key, value  in menu_dict.items %}        
     {% if key %}     
-      <li>
-        
+      <li>        
         <a {% if current_url|stringformat:"s"|cut:"/" == key.url|stringformat:"s"|cut:"/" %}class="active"{% endif %} href="{{ key.url }}">
           {{ key.title }}
-        </a>  
-     
+        </a>     
         {% if value %}
           <ul class="sub-menu">
             {% include 'templatetags/menu.html' with menu_dict=value current_url=current_url reply=True only %}
           </ul>
         {% endif %}
-
       </li>
     {% endif %}
   {% endfor %}
