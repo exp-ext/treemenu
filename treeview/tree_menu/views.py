@@ -8,7 +8,7 @@ class PageView(TemplateView):
 
 def post_detail(request, post_id):
 
-    post = f'Пост номер {post_id}'
+    post = f'Элемент-{post_id}'
     context = {
         'post': post,
     }

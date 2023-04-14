@@ -11,7 +11,7 @@ class MenuItemInline(admin.TabularInline):
 
 @admin.register(MenuItem)
 class MenuItemAdmin(admin.ModelAdmin):
-    ordering = ('slug', )
+    ordering = ('slug', 'parent_id')
     list_filter = ('parent',)
     list_display = ('parent', 'title', 'url', 'slug', 'children_count')
     search_fields = ('title',)

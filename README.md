@@ -1,5 +1,8 @@
+![статус](https://github.com/exp-ext/treemenu/actions/workflows/foodgram_workflow.yml/badge.svg?event=push)
+
+
 <div>
-<div>Нужно сделать django app, который будет реализовывать древовидное меню, соблюдая следующие условия:</div>
+<div>Django app, который будет реализовывать древовидное меню, соблюдая следующие условия:</div>
 <ol>
 <li>Меню реализовано через template tag</li>
 <li>Все, что над выделенным пунктом - развернуто. Первый уровень вложенности под выделенным пунктом тоже развернут.</li>
@@ -16,3 +19,11 @@
 <div>&nbsp;</div>
 <div>При выполнении задания из библиотек следует использовать только Django и стандартную библиотеку Python.</div>
 </div>
+
+<p align="center">
+<img src="https://github.com/exp-ext/treemenu/blob/master/media/tree.png?raw=true" width="1200">
+</p>
+
+<p align="center">
+<img src="https://github.com/exp-ext/treemenu/blob/master/media/request.png?raw=true" width="1200">
+</p>
