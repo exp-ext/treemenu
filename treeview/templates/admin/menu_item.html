@@ -1,0 +1,10 @@
+{% for child in item.children.all %}
+  <li class="menu-item">
+    <a href={% url 'admin:tree_menu_menuitem_change' child.id %}>{{ child.title }}</a>
+    {% if child.children.exists %}
+      <ul class="menu-list">
+        {% include "admin/menu_item.html" with item=child %}
+      </ul>
+    {% endif %}
+  </li>
+{% endfor %}

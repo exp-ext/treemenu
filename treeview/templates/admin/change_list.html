@@ -1,0 +1,12 @@
+{% extends "admin/change_list.html" %}
+
+{% block result_list %}
+  <ul class="menu-list">
+    {% for item in cl.result_list %}
+      {% if not item.parent %}
+        <a href={% url 'admin:tree_menu_menuitem_change' item.id %}><h2>{{ item.title }}</h2></a>
+        {% include "admin/menu_item.html" with item=item %}
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endblock %}

@@ -12,9 +12,7 @@ class MenuItemInline(admin.TabularInline):
 
 @admin.register(MenuItem)
 class MenuItemAdmin(admin.ModelAdmin):
-    ordering = ('slug', 'parent_id')
-    list_filter = ('parent_id',)
+    ordering = ('slug',)
     list_display = ('parent', 'title', 'url', 'slug')
-    search_fields = ('title',)
     prepopulated_fields = {'slug': ('title',)}
     inlines = (MenuItemInline,)

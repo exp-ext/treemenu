@@ -1,8 +1,17 @@
 ![статус](https://github.com/exp-ext/treemenu/actions/workflows/workflow.yml/badge.svg?event=push)
 
-<p align="center">
-<img src="https://github.com/exp-ext/treemenu/blob/main/treeview/media/tree.png" width="1200">
-</p>
+<div align="center">
+    <table border="0" cellpadding="0" cellspacing="0" align="center">
+        <tr>
+            <td>
+                <img src="https://github.com/exp-ext/treemenu/blob/main/treeview/media/tree.png">
+            </td>
+            <td>
+                <img src="https://github.com/exp-ext/treemenu/blob/main/treeview/media/admin.png" class="merge">
+            </td>
+        </tr>
+    </table>
+</div>
 
 <div>
 <div>Django app, который будет реализовывать древовидное меню, соблюдая следующие условия:</div>
