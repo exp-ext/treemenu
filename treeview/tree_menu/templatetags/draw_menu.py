@@ -1,3 +1,4 @@
+from typing import Dict, List, Optional
 from django import template
 
 from ..models import MenuItem
@@ -5,9 +6,16 @@ from ..models import MenuItem
 register = template.Library()
 
 
-def render_menu(menu_items, parent=None):
+def render_menu(menu_items: List[MenuItem],
+                parent: Optional[MenuItem] = None) -> Dict[MenuItem, Dict]:
     """
-    Рекурсивно создаёт словарь древовидного меню.
+    Рекурсивно создаёт словарь для древовидного меню.
+
+    :param menu_items: queryset MenuItem, для которых необходимо
+    создать меню
+    :param parent: опциональный объект MenuItem, родительский элемент
+    :return: словарь, представляющий древовидное меню, где ключ - объект
+    MenuItem, значение - словарь с дочерними элементами
     """
     menu_dict = {}
     for item in menu_items:
@@ -21,15 +29,18 @@ def render_menu(menu_items, parent=None):
 
 
 @register.inclusion_tag('templatetags/menu.html', takes_context=True)
-def draw_menu(context, menu_name):
+def draw_menu(context: Dict, menu_name: str) -> Dict:
     """
     Одним запросом выгружаем queryset с данными для меню,
-    создаёт и возвращаем словарь и текущий url.
-    """
+    инициирует создание и возвращаем словарь с меню и текущий url.
 
-    menu_items = MenuItem.objects.filter(
-        slug=menu_name
-    ).select_related('parent')
+    :param context: словарь контекста, содержащий информацию об HTTP-запросе
+    :param menu_name: строковое значение, slag для фильтрации меню
+    :return: Словарь, содержащий древовидное меню; текущий URL.
+    """
+    menu_items = (
+        MenuItem.objects.filter(slug=menu_name).select_related('parent')
+    )
 
     menu_dict = render_menu(menu_items)
 
