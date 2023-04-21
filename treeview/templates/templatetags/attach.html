@@ -1,0 +1,12 @@
+<ul class="sub-menu">
+  <ul>    
+    {% for child in menu_items %}
+      {% if child.parent == parent %}
+        <li>
+          <a class="{% if current_url|stringformat:"s"|cut:"/" == child.url|stringformat:"s"|cut:"/" %}active{% endif %}" href="{{ child.url }}">{{ child.title }}</a>
+          {% include 'templatetags/attach.html' with menu_items=menu_items current_url=current_url parent=child %}
+        </li>
+      {% endif %}    
+    {% endfor %}
+  </ul>
+</ul>
